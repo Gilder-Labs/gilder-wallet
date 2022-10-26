@@ -9,6 +9,7 @@
     "publishConfig": {
         "access": "public"
     },
+    "files":["src", "lib", "README.md"],
     "license": "Apache-2.0",
     "engines": {
         "node": ">=16"
