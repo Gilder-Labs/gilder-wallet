@@ -1,6 +1,6 @@
 {
     "name": "@gilder/standard-wallet",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "repository": {
         "type": "git",
         "url": "https://github.com/gilder-labs/gilder-wallet.git",
@@ -9,7 +9,11 @@
     "publishConfig": {
         "access": "public"
     },
-    "files":["src", "lib", "README.md"],
+    "files": [
+        "src",
+        "lib",
+        "README.md"
+    ],
     "license": "Apache-2.0",
     "engines": {
         "node": ">=16"
