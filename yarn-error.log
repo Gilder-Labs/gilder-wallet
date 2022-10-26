@@ -1,0 +1,78 @@
+Arguments: 
+  /Users/dawggydawg/.nvm/versions/node/v16.15.1/bin/node /Users/dawggydawg/.nvm/versions/node/v16.15.1/bin/yarn build
+
+PATH: 
+  /Users/dawggydawg/.nvm/versions/node/v16.15.1/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/dawggydawg/Library/Android/sdk/platform-tools:/Users/dawggydawg/.nvm/versions/node/v16.15.1/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/dawggydawg/Projects/gilder-wallet/package.json: Unexpected token } in JSON at position 1451
+      at JSON.parse (<anonymous>)
+      at /Users/dawggydawg/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/Users/dawggydawg/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/dawggydawg/.nvm/versions/node/v16.15.1/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+      "private": true,
+      "name": "gilder-standard-wallet",
+      "version": "0.0.1",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/gilder-labs/gilder-wallet.git",
+        "directory": "."
+      },
+      "publishConfig": {
+        "access": "public"
+      },
+      "license": "Apache-2.0",
+      "engines": {
+          "node": ">=16"
+      },
+      "type": "module",
+      "sideEffects": false,
+      "main": "./lib/cjs/index.js",
+      "module": "./lib/esm/index.js",
+      "types": "./lib/types/index.d.ts",
+      "exports": {
+          "require": "./lib/cjs/index.js",
+          "import": "./lib/esm/index.js",
+          "types": "./lib/types/index.d.ts"
+      },
+      "scripts": {
+          "fmt": "prettier --write '{*,**/*}.{ts,tsx,js,jsx,json}'",
+          "clean": "shx mkdir -p lib && shx rm -rf lib",
+          "tsc": "tsc --build --verbose tsconfig.all.json",
+          "package": "shx echo '{ \"type\": \"commonjs\" }' > lib/cjs/package.json",
+          "build": "npm run clean && npm run tsc && npm run package"
+      },
+      "dependencies": {
+          "@solana/wallet-standard-features": "^1.0.0-rc.7",
+          "@solana/web3.js": "^1.58.0",
+          "@wallet-standard/base": "^1.0.0-rc.5",
+          "@wallet-standard/features": "^1.0.0-rc.5",
+          "bs58": "^4.0.1"
+      },
+      "devDependencies": {
+          "@types/bs58": "^4.0.1",
+          "@types/node-fetch": "^2.6.2",
+          "prettier": "^2.7.1",
+          "shx": "^0.3.4",
+          "typescript": "^4.8.4"
+      },
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
