@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "gilder-standard-wallet",
+    "name": "@gilder/standard-wallet",
     "version": "0.0.1",
     "repository": {
       "type": "git",
